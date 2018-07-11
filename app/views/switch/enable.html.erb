@@ -1,0 +1,13 @@
+<h2> Two Factor Authentication Enabled </h2>
+
+<h3> Setup Your Google Authenticator App </h3>
+
+<ol>
+	<li> Open Google Authenticator App </li>
+	<li> Click on the "<strong> + </strong>" Sign </li>
+	<li> Select "<strong>Enter a proided key</strong>" </li>
+	<li> Enter Account Name of your choice </li>
+	<li> Enter your Key - "<strong><%=@user.otp_secret  %></strong>" </li>
+</ol>
+
+Done Setting Up, Back to <%= link_to 'Home', root_path %>
