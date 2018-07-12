@@ -16,7 +16,7 @@ class SwitchController < ApplicationController
 
 	def enable
 		@user=current_user
-		if @user.otp_required_for_login == false
+		if !@user.otp_required_for_login
 			@user.otp_required_for_login = true
 			@user.otp_secret = User.generate_otp_secret
 			@user.save!
